@@ -38,6 +38,14 @@ Open http://127.0.0.1:8000
 
 Never commit your `.env` file or API key to GitHub.
 
+## Deploy on Vercel
+
+Vercel detects the FastAPI `app` in `app.py` automatically, and `vercel.json` gives the function up to 30 seconds per request.
+
+1. Sign in at [vercel.com](https://vercel.com) with GitHub → **Add New → Project** → import this repository.
+2. Leave the settings as they are and click **Deploy**. It runs in demo mode with no API key.
+3. For AI mode: Project → **Settings → Environment Variables** → add `OPENAI_API_KEY` (optionally `OPENAI_MODEL`), then **Redeploy**.
+
 ## Use your own documents
 
 Put `.md` or `.txt` files in `docs/` and restart. Headings (`#`, `##`) become the section names shown under each answer.
